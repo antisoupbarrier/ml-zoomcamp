@@ -52,21 +52,21 @@ Note: pipenv and Docker needed to execute all of the functions of this project.
 git clone repo name
 ```
 
-1. Navigate to the cloned repo directory in a terminal window.
+2. Navigate to the cloned repo directory in a terminal window.
 
-1. Install dependencies to run files.
+3. Install dependencies to run files.
 
 If running locally, use pipenv to ensure all required dependencies are installed.
 ```bash
 pipenv install
 ```
-1. Run the train.py script to generate the model used for predictions.
+4. Run the train.py script to generate the model used for predictions.
 
 ```bash
 python pipenv run python train.py
 ```
 
-1. Run the predict.py application:
+5. Run the predict.py application:
 
 - Option A: Run locally with gunicorn
 ```bash
@@ -82,7 +82,7 @@ docker build -t seed-prediction .
 docker run -it --rm -p 9696:9696 seed-prediction:latest
 ```
 
-1. Run predict-test.py in another terminal window
+6. Run predict-test.py in another terminal window
 
 ```bash
 python predict-test.py
